@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>885</width>
+    <height>607</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="res.qrc">
+    <normaloff>:/new/prefix1/res/office.png</normaloff>:/new/prefix1/res/office.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLabel" name="label_name">
+        <property name="text">
+         <string>位置</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit_pos"/>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>文件名</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit_name"/>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QTextEdit" name="textEdit">
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>885</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_F">
+    <property name="title">
+     <string>文件(F)</string>
+    </property>
+    <addaction name="action_open"/>
+    <addaction name="action_add"/>
+    <addaction name="action_save"/>
+    <addaction name="action_saveAs"/>
+   </widget>
+   <widget class="QMenu" name="menu_E">
+    <property name="title">
+     <string>编辑(E)</string>
+    </property>
+    <addaction name="action_copy"/>
+    <addaction name="action_cut"/>
+    <addaction name="action_paste"/>
+    <addaction name="action_find"/>
+    <addaction name="action_back"/>
+    <addaction name="action_next"/>
+   </widget>
+   <widget class="QMenu" name="menu_O">
+    <property name="title">
+     <string>格式(O)</string>
+    </property>
+    <addaction name="action_atLeft"/>
+    <addaction name="action_atMid"/>
+    <addaction name="action_atRight"/>
+    <addaction name="action_underLine"/>
+    <addaction name="action_Bold"/>
+    <addaction name="action_Ita"/>
+    <addaction name="action_modify"/>
+    <addaction name="action_color"/>
+   </widget>
+   <addaction name="menu_F"/>
+   <addaction name="menu_E"/>
+   <addaction name="menu_O"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_open"/>
+   <addaction name="action_add"/>
+   <addaction name="action_save"/>
+   <addaction name="action_saveAs"/>
+   <addaction name="separator"/>
+   <addaction name="action_copy"/>
+   <addaction name="action_cut"/>
+   <addaction name="action_paste"/>
+   <addaction name="action_find"/>
+   <addaction name="separator"/>
+   <addaction name="action_back"/>
+   <addaction name="action_next"/>
+   <addaction name="separator"/>
+   <addaction name="action_atLeft"/>
+   <addaction name="action_atMid"/>
+   <addaction name="action_atRight"/>
+   <addaction name="separator"/>
+   <addaction name="action_underLine"/>
+   <addaction name="action_Bold"/>
+   <addaction name="action_Ita"/>
+   <addaction name="action_modify"/>
+   <addaction name="action_color"/>
+  </widget>
+  <action name="action_open">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/new/prefix1/res/FolderOpen.svg</normaloff>:/new/prefix1/res/FolderOpen.svg</iconset>
+   </property>
+   <property name="text">
+    <string>打开</string>
+   </property>
+   <property name="toolTip">
+    <string>打开</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="action_add">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/new/prefix1/res/DocumentAdd.svg</normaloff>:/new/prefix1/res/DocumentAdd.svg</iconset>
+   </property>
+   <property name="text">
+    <string>添加</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="action_save">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/new/prefix1/res/Save.svg</normaloff>:/new/prefix1/res/Save.svg</iconset>
+   </property>
+   <property name="text">
+    <string>保存</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="action_saveAs">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/new/prefix1/res/SaveAs.svg</normaloff>:/new/prefix1/res/SaveAs.svg</iconset>
+   </property>
+   <property name="text">
+    <string>另存为</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="action_copy">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/new/prefix1/res/Duplicate.svg</normaloff>:/new/prefix1/res/Duplicate.svg</iconset>
+   </property>
+   <property name="text">
+    <string>复制</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="action_cut">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/new/prefix1/res/Scissors.svg</normaloff>:/new/prefix1/res/Scissors.svg</iconset>
+   </property>
+   <property name="text">
+    <string>剪切</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="action_paste">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/new/prefix1/res/paste.svg</normaloff>:/new/prefix1/res/paste.svg</iconset>
+   </property>
+   <property name="text">
+    <string>粘贴</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="action_find">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/new/prefix1/res/DocumentSearch.svg</normaloff>:/new/prefix1/res/DocumentSearch.svg</iconset>
+   </property>
+   <property name="text">
+    <string>查找</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="action_back">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/new/prefix1/res/pre.svg</normaloff>:/new/prefix1/res/pre.svg</iconset>
+   </property>
+   <property name="text">
+    <string>撤回</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="action_next">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/new/prefix1/res/next.svg</normaloff>:/new/prefix1/res/next.svg</iconset>
+   </property>
+   <property name="text">
+    <string>下一步</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="action_atLeft">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/new/prefix1/res/atLeft.svg</normaloff>:/new/prefix1/res/atLeft.svg</iconset>
+   </property>
+   <property name="text">
+    <string>居左</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="action_atMid">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/new/prefix1/res/atMid.svg</normaloff>:/new/prefix1/res/atMid.svg</iconset>
+   </property>
+   <property name="text">
+    <string>居中</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="action_atRight">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/new/prefix1/res/atright.svg</normaloff>:/new/prefix1/res/atright.svg</iconset>
+   </property>
+   <property name="text">
+    <string>居右</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="action_underLine">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/new/prefix1/res/underline.svg</normaloff>:/new/prefix1/res/underline.svg</iconset>
+   </property>
+   <property name="text">
+    <string>下划线</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="action_Bold">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/new/prefix1/res/B.svg</normaloff>:/new/prefix1/res/B.svg</iconset>
+   </property>
+   <property name="text">
+    <string>粗体</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="action_Ita">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/new/prefix1/res/I.svg</normaloff>:/new/prefix1/res/I.svg</iconset>
+   </property>
+   <property name="text">
+    <string>斜体</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="action_modify">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/new/prefix1/res/font.svg</normaloff>:/new/prefix1/res/font.svg</iconset>
+   </property>
+   <property name="text">
+    <string>调整字体</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="action_color">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/new/prefix1/res/color.svg</normaloff>:/new/prefix1/res/color.svg</iconset>
+   </property>
+   <property name="text">
+    <string>颜色</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
+ <connections/>
+</ui>

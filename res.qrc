@@ -1,0 +1,23 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>res/atLeft.svg</file>
+        <file>res/atMid.svg</file>
+        <file>res/atright.svg</file>
+        <file>res/B.svg</file>
+        <file>res/DocumentAdd.svg</file>
+        <file>res/DocumentSearch.svg</file>
+        <file>res/Duplicate.svg</file>
+        <file>res/FolderOpen.svg</file>
+        <file>res/I.svg</file>
+        <file>res/paste.svg</file>
+        <file>res/Save.svg</file>
+        <file>res/SaveAs.svg</file>
+        <file>res/Scissors.svg</file>
+        <file>res/underline.svg</file>
+        <file>res/next.svg</file>
+        <file>res/pre.svg</file>
+        <file>res/font.svg</file>
+        <file>res/office.png</file>
+        <file>res/color.svg</file>
+    </qresource>
+</RCC>
